@@ -9,29 +9,35 @@
 		setSearchEngine();
 		// TODO: create a handler
 		let engine = ""
+		let google = ""
+		let duckDuckGo =""
+		let bing = ""
+		let ask = ""
 		let form = document.querySelector("input [engine]");
-		if (engine.value = google){
-			action = "https://www.google.com/search"
+		if (engine === google){
+			actionURL = "https://www.google.com/"
 		}
-		if (engine.value = duckDuckGo){
-			action = "https://duckduckgo.com/"
+		else if (engine === duckDuckGo){
+			actionURL = "https://duckduckgo.com/"
 		}
-		if (engine.value = bing) {
-			action = "https://www.bing.com/search"
+		else if (engine === bing) {
+			actionURL = "https://www.bing.com/"
 		}
-		if (engine.value = ask){
-			action = "https://www.ask.com/web"
+		else if (engine === ask){
+			action = "https://www.ask.com/"
 		}
-    window.addEventListener("load", function(){
+    window.addEventListener("load", function() {
+
+	});
         // TODO: register the handler
 		
 		
-    });
+  
 	</script>
 </head>
 
 <body>
-
+	
 	<form id="searchForm" method = "GET">
 		<label><input type = "text" name="q"/></label>
 		Search Engine Options:
@@ -45,5 +51,5 @@
 
     
 	</form>
-
+	
 </body>
