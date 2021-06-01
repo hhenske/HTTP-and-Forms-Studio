@@ -3,17 +3,47 @@
 <head>
 	<meta charset="utf-8">
 	<script>
+		function setSearchEngine () {
+			console.log("when does this function run?")
+		}
+		setSearchEngine();
 		// TODO: create a handler
+		let engine = ""
+		let form = document.querySelector("input [engine]");
+		if (engine.value = google){
+			action = "https://www.google.com/search"
+		}
+		if (engine.value = duckDuckGo){
+			action = "https://duckduckgo.com/"
+		}
+		if (engine.value = bing) {
+			action = "https://www.bing.com/search"
+		}
+		if (engine.value = ask){
+			action = "https://www.ask.com/web"
+		}
     window.addEventListener("load", function(){
         // TODO: register the handler
+		
+		
     });
 	</script>
 </head>
 
 <body>
 
-	<form id="searchForm">
-    <!-- TODO: add form elements -->
+	<form id="searchForm" method = "GET">
+		<label><input type = "text" name="q"/></label>
+		Search Engine Options:
+		<label>Google<input type="radio"
+			name="engine" value="google"/></label>
+			<label>DuckDuckGo<input type="radio" name="engine" value="duckDuckGo"/></label>
+			<label>Bing<input type="radio" name="engine" value="bing"/></label>
+			<label>Ask<input type="radio" name="engine" value="ask"/></label>
+		
+			<button>Go</button>
+
+    
 	</form>
 
 </body>
