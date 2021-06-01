@@ -6,25 +6,26 @@
 		function setSearchEngine () {
 			console.log("when does this function run?")
 		}
-		setSearchEngine();
+		function setSearchEngine() {
 		// TODO: create a handler
-		let engine = ""
-		let google = ""
-		let duckDuckGo =""
-		let bing = ""
-		let ask = ""
-		let form = document.querySelector("input [engine]");
-		if (engine === google){
-			actionURL = "https://www.google.com/"
-		}
-		else if (engine === duckDuckGo){
-			actionURL = "https://duckduckgo.com/"
-		}
-		else if (engine === bing) {
-			actionURL = "https://www.bing.com/"
-		}
-		else if (engine === ask){
-			action = "https://www.ask.com/"
+			let engine = ""
+			let google = ""
+			let duckDuckGo =""
+			let bing = ""
+			let ask = ""
+			let form = document.querySelector("input [engine]");
+			if (engine === google){
+				actionURL = "https://www.google.com/"
+			}
+			else if (engine === duckDuckGo){
+				actionURL = "https://duckduckgo.com/"
+			}
+			else if (engine === bing) {
+				actionURL = "https://www.bing.com/"
+			}
+			else if (engine === ask){
+				action = "https://www.ask.com/"
+			}
 		}
     window.addEventListener("load", function() {
 
