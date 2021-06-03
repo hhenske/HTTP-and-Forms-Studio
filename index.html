@@ -3,53 +3,49 @@
 <head>
 	<meta charset="utf-8">
 	<script>
-		function setSearchEngine () {
-			console.log("when does this function run?")
-		
-		// TODO: create a handler
-			let engine = ""
-			let google = ""
-			let duckDuckGo =""
-			let bing = ""
-			let ask = ""
-			let form = document.querySelector("input [engine]");
-			if (engine === google){
-				actionURL = "https://www.google.com/"
-			}
-			else if (engine === duckDuckGo){
-				actionURL = "https://duckduckgo.com/"
-			}
-			else if (engine === bing) {
-				actionURL = "https://www.bing.com/"
-			}
-			else if (engine === ask){
-				action = "https://www.ask.com/"
-			}
+	function setSearchEngine() {
+		let engineChoice = document.querySelector('input[name="engine"]:checked')
+		if (!engineChoice) {
+			return null;
 		}
-    window.addEventListener("load", function() {
+		let actions = {
+			"google": "https://www.google.com/",
+			"duckDuckGo":"https://duckduckgo.com/",
+			"bing": "https://www.bing.com/search",
+			"ask": "https://www.ask.com/web"
+		}
+		let url = actions[engineChoice.value];
+		return url
+	}
+		window.addEventListener("load", function(){
+		let form = document.querySelector("form");
+		form.addEventListener('submit', function(event){
+			let url = setSearchEngine();
+		form.setAttribute("action", url);
+		
+		})
 
+
+				
 	});
-        // TODO: register the handler
+    
+        
 		
-		
+	
   
 	</script>
 </head>
 
 <body>
 	
-	<form id="searchForm" method = "GET">
+	<form id="searchForm" method = "GET" action = "">
 		<label><input type = "text" name="q"/></label>
 		Search Engine Options:
-		<label>Google<input type="radio"
-			name="engine" value="google"/></label>
+		<label>Google<input type="radio" name="engine" value="google"/></label>
 			<label>DuckDuckGo<input type="radio" name="engine" value="duckDuckGo"/></label>
 			<label>Bing<input type="radio" name="engine" value="bing"/></label>
 			<label>Ask<input type="radio" name="engine" value="ask"/></label>
-		
-			<button>Go</button>
-
-    
+			<button>Go!</button>
 	</form>
 	
 </body>
